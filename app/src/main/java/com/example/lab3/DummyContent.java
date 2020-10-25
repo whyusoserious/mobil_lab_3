@@ -4,15 +4,15 @@ import java.util.List;
 
 public class DummyContent {
     public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
-    private static final int COUNT = 25;
+    private static final int COUNT = 27;
 
     static {
         // Добавление элементов в список.
         for (int k = 0; k < COUNT; k++) {
             String[] builder = new String[COUNT];
-            builder[0]="Информация об элементе:  " +(k+1);
-            for (int j = 1; j <COUNT; j++) { builder[j]="Детальная информация. "; }
-            ITEMS.add(new DummyItem(String.valueOf(k+1), "Элемент " + (k+1), builder));
+            builder[0]="Информация об элементе:  " +(k);
+            for (int j = 1; j <=k; j++) { builder[j]="Детальная информация. "; }
+            ITEMS.add(new DummyItem(String.valueOf(k), "Элемент " + k, builder));
         }
     }
 
